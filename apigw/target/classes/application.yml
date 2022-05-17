@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: api-gateway
+
   cloud:
     gateway:
       routes:
@@ -11,15 +12,18 @@ spring:
           uri: lb://product-service
           predicates:
             - Path=/api/v1/products
+
         - id: order-service
           uri: lb://order-service
           predicates:
             - Path=/api/v1/orders
+
         - id: eureka-server
           uri: http://localhost:8761
           predicates:
             - Path=/eureka/web
           filters: SetPath=/
+
         - id: eureka-server-static
           uri: http://localhost:8761
           predicates:
@@ -30,3 +34,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+

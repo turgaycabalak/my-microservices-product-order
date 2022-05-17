@@ -5,8 +5,8 @@ spring:
   application:
     name: order-service
   datasource:
-    username: root
-    password: root
+    username: postgres
+    password: tcabalak
     url: jdbc:postgresql://localhost:5432/orderdb
   jpa:
     hibernate:

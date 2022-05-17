@@ -15,6 +15,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="18" />
       <module name="clients" target="18" />
     </bytecodeTargetLevel>
   </component>
